@@ -1,0 +1,226 @@
+:root {
+    --font-family-red-hat: "Red Hat Display", sans-serif;
+
+    --font-size-sm: 0.875rem;
+    --font-size-md: 1rem;
+    --font-size-3xl: 1.75rem;
+
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+
+    --clr-pale-blue: hsl(225, 100%, 94%);
+    --clr-bright-blue: hsl(245, 75%, 52%);
+    --clr-very-pale-blue: hsl(225, 100%, 98%);
+    --clr-desaturated-blue: hsl(224, 23%, 55%);
+    --clr-dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-red-hat);
+    background-color: var(--clr-pale-blue);
+}
+
+picture img {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+
+.card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.card__image {
+    width: 100%;
+    border-radius: 1.25rem 1.25rem 0rem 0rem;
+}
+
+.order {
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
+    background-color: #fff;
+    border-radius: 0rem 0rem 1.25rem 1.25rem;
+    box-shadow: 0rem 1rem 2rem -1rem var(--clr-desaturated-blue);
+}
+
+.order__title {
+    font-weight: var(--font-weight-black);
+    color: var(--clr-dark-blue);
+    text-align: center;
+}
+
+.order__description {
+    font-weight: var(--font-weight-medium);
+    color: var(--clr-desaturated-blue);
+    line-height: 1.5;
+    text-align: center;
+}
+
+.order__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--clr-very-pale-blue);
+    border-radius: 0.75rem;
+}
+
+.order__info__product {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.order__info__product-title {
+    font-weight: var(--font-weight-black);
+    color: var(--clr-dark-blue);
+}
+
+.order__info__product-price {
+    font-weight: var(--font-weight-medium);
+    color: var(--clr-desaturated-blue);
+}
+
+.order__info__product-change {
+    height: fit-content;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    color: var(--clr-bright-blue);
+    text-decoration: underline;
+}
+
+.order__info__product-change:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.order__proceed-to-payment {
+    height: 50px;
+    background-color: var(--clr-bright-blue);
+    border: none;
+    border-radius: 0.625rem;
+    font-size: 0.9375rem;
+    font-weight: var(--font-weight-bold);
+    color: #fff;
+    box-shadow: 0rem 0.5rem 1rem var(--clr-desaturated-blue);
+}
+
+.order__proceed-to-payment:hover {
+    cursor: pointer;
+    opacity: 75%;
+}
+
+.order__cancel-order {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-black);
+    color: var(--clr-desaturated-blue);
+    text-align: center;
+}
+
+.order__cancel-order:hover {
+    cursor: pointer;
+    color: var(--clr-dark-blue);
+}
+
+@media only screen and (width <=768px) {
+    .card {
+        width: 330px;
+        height: 570px;
+    }
+
+    .order {
+        padding: 1.875rem 1.5625rem;
+    }
+
+    .order__title {
+        font-size: 1.375rem;
+    }
+
+    .order__description {
+        font-size: 0.9375rem;
+        padding: 0rem 0.625rem;
+    }
+
+    .order__info {
+        width: 280px;
+        max-height: 80px;
+        padding: 1.25rem;
+        margin-top: 0.75rem;
+    }
+
+    .order__info img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .order__info__product {
+        margin-right: 1.75rem;
+    }
+
+    .order__info__product-title,
+    .order__info__product-price {
+        font-size: var(--font-size-sm);
+    }
+
+    .order__proceed-to-payment,
+    .order__cancel-order {
+        margin-top: 0.5rem;
+    }
+}
+
+@media only screen and (width > 768px) {
+    .card {
+        width: 450px;
+        height: 700px;
+    }
+
+    .order {
+        padding: 2.8125rem 3.125rem;
+    }
+
+    .order__title {
+        font-size: var(--font-size-3xl);
+    }
+
+    .order__description {
+        font-size: 1.0625rem;
+    }
+
+    .order__info {
+        width: 350px;
+        max-height: 100px;
+        padding: 1.5625rem;
+    }
+
+    .order__info img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .order__info__product {
+        margin-right: 4.25rem;
+    }
+
+    .order__info__product-title,
+    .order__info__product-price {
+        font-size: var(--font-size-md);
+    }
+
+    .order__proceed-to-payment,
+    .order__cancel-order {
+        margin-top: 1rem;
+    }
+}
