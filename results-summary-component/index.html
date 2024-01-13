@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Results summary component</title>
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="sr-only">Results summary component</h1>
+      <div class="result__container">
+        <h2>Your Result</h2>
+        <div class="score__container">
+          <h3>76</h3>
+          <span>of 100</span>
+        </div>
+        <h3 class="result-word">Great</h3>
+        <p>
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </div>
+      <div class="summary__container">
+        <h2>Summary</h2>
+        <div class="categories__container">
+          <div class="reaction-result category-result">
+            <div class="left-side">
+              <img
+                class="icon"
+                src="assets/images/icon-reaction.svg"
+                alt="Lightning, which means reaction"
+              />
+              <h3 class="reaction category-title">Reaction</h3>
+            </div>
+            <div class="right-side">
+              <h4><span class="category-score">80</span> &nbsp;/ 100</h4>
+            </div>
+          </div>
+          <div class="memory-result category-result">
+            <div class="left-side">
+              <img
+                class="icon"
+                src="assets/images/icon-memory.svg"
+                alt="Brains, which means memory"
+              />
+              <h3 class="memory category-title">Memory</h3>
+            </div>
+            <div class="right-side">
+              <h4><span class="category-score">92</span> &nbsp;/ 100</h4>
+            </div>
+          </div>
+          <div class="verbal-result category-result">
+            <div class="left-side">
+              <img
+                class="icon"
+                src="assets/images/icon-verbal.svg"
+                alt="Message, which means verbal"
+              />
+              <h3 class="verbal category-title">Verbal</h3>
+            </div>
+            <div class="right-side">
+              <h4><span class="category-score">61</span> &nbsp;/ 100</h4>
+            </div>
+          </div>
+          <div class="visual-result category-result">
+            <div class="left-side">
+              <img
+                class="icon"
+                src="assets/images/icon-visual.svg"
+                alt="Eye, which means visual"
+              />
+              <h3 class="visual category-title">Visual</h3>
+            </div>
+            <div class="right-side">
+              <h4><span class="category-score">72</span> &nbsp;/ 100</h4>
+            </div>
+          </div>
+        </div>
+        <button class="continue-button">Continue</button>
+      </div>
+    </main>
+  </body>
+</html>
