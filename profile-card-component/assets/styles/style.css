@@ -49,6 +49,7 @@ body {
     position: absolute;
     overflow: hidden;
     clip-path: rect(0 0 0 0);
+    z-index: -9999;
 }
 
 .card {
