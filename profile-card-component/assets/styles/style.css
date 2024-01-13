@@ -148,7 +148,11 @@ body {
 
 @media only screen and (width <=480px) {
     .bg-pattern-top {
-        transform: translate(0%, 0%);
+        transform: translate(-75%, -65%);
+    }
+
+    .bg-pattern-bottom {
+        transform: translate(75%, 62.5%);
     }
 
     .card {
