@@ -44,6 +44,7 @@ body {
     max-height: 480px;
     background-color: var(--clr-white);
     border-radius: .5rem;
+    box-shadow: 0 1rem 1.25rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 .sr-only {
