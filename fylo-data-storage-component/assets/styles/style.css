@@ -1,0 +1,243 @@
+:root {
+    --ff-raleway: "Raleway", sans-serif;
+
+    --fs-xs: .75rem;
+    --fs-sm: .875rem;
+    --fs-3xl: 2.625rem;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+    --clr-pale-blue: hsl(243, 100%, 93%);
+    --clr-grayish-blue: hsl(229, 7%, 55%);
+    --clr-dark-blue: hsl(228, 56%, 26%);
+    --clr-very-dark-blue: hsl(229, 57%, 11%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-gradient-from: hsl(6, 100%, 80%);
+    --clr-gradient-to: hsl(335, 100%, 65%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--clr-very-dark-blue);
+    font-family: var(--ff-raleway);
+}
+
+picture img {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    object-fit: contain;
+    z-index: -1;
+}
+
+main {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: rect(0 0 0 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 350px;
+    max-height: 200px;
+    padding: 2.5rem 8.25rem 2.5rem 2.5rem;
+    background-color: var(--clr-dark-blue);
+    border-radius: .5rem 6rem .5rem .5rem;
+}
+
+.logo {
+    width: fit-content;
+    object-fit: contain;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    width: 24px;
+    height: 24px;
+    background-color: var(--clr-very-dark-blue);
+    border-radius: .625rem;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    gap: 1rem;
+    padding: 2.5rem;
+    width: 540px;
+    max-height: 154px;
+    background-color: var(--clr-dark-blue);
+    border-radius: .5rem;
+}
+
+.storage-used {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-regular);
+    color: var(--clr-white);
+}
+
+.storage-used-amount {
+    font-weight: var(--fw-bold);
+}
+
+.progress-bar {
+    position: relative;
+    background-color: hsla(229, 57%, 11%, .5);
+    border-radius: 1rem;
+    height: 20px;
+}
+
+.progress-bar::before {
+    content: "";
+    background: linear-gradient(90deg, var(--clr-gradient-from) 0%, var(--clr-gradient-to) 100%);
+    border-radius: 1rem;
+    width: 81.5%;
+    height: 14px;
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+}
+
+.progress-bar::after {
+    content: "";
+    background-color: var(--clr-white);
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    left: 79.375%;
+    transform: translateY(-50%);
+}
+
+.progress-bar-data {
+    display: flex;
+    justify-content: space-between;
+    margin-top: .5rem;
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-bold);
+    color: var(--clr-white);
+}
+
+.storage-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -11rem;
+    left: 100%;
+    transform: translateX(-100%);
+    max-width: 180px;
+    max-height: 72px;
+    padding: 1.125rem 1.5rem;
+    background-color: var(--clr-white);
+    border-radius: .5rem;
+}
+
+.storage-left::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -1.375rem;
+    height: 3rem;
+    width: 3rem;
+    background-color: var(--clr-white);
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+.storage-left-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    color: var(--clr-grayish-blue);
+}
+
+.storage-left-amount {
+    font-size: var(--fs-3xl);
+    color: var(--clr-very-dark-blue);
+}
+
+@media only screen and (width <=1024px) {
+    main {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .storage-left {
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -20%);
+    }
+
+    .storage-left::after {
+        content: none;
+    }
+}
+
+@media only screen and (width <=768px) {
+    picture img {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+
+    .left-container {
+        max-width: 326px;
+    }
+
+    .info-container {
+        max-width: 326px;
+        max-height: 162px;
+    }
+
+    .storage-left {
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -10%);
+    }
+
+    .progress-bar::after {
+        left: 78%;
+    }
+}
