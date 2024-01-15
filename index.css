@@ -20,6 +20,7 @@ body {
     min-width: 378px;
     font-family: "Inter", sans-serif;
     background-color: var(--clr-primary);
+    padding: 2rem;
 }
 
 .container {
@@ -96,7 +97,7 @@ body {
 
 @media only screen and (width <=632px) {
     body {
-        padding: 0rem 1rem;
+        padding: 1rem;
     }
 
     .header .heading {

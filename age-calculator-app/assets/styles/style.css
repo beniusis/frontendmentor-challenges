@@ -1,0 +1,223 @@
+:root {
+    --ff-poppins: "Poppins", sans-serif;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+    --fw-extrabold: 800;
+
+    --clr-purple: hsl(259, 100%, 65%);
+    --clr-light-red: hsl(0, 100%, 67%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-off-white: hsl(0, 0%, 94%);
+    --clr-light-grey: hsl(0, 0%, 86%);
+    --clr-smokey-grey: hsl(0, 1%, 44%);
+    --clr-off-black: hsl(0, 0%, 8%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: var(--ff-poppins);
+    background-color: var(--clr-off-white);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3.5rem;
+    max-width: 842px;
+    width: 100%;
+    max-height: 652px;
+    background-color: var(--clr-white);
+    border-radius: 1.5rem 1.5rem 12.5rem 1.5rem;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: rect(0 0 0 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+
+.single-input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5rem;
+}
+
+.single-input label {
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+    color: var(--clr-smokey-grey);
+}
+
+.single-input label[error] {
+    color: var(--clr-light-red);
+}
+
+.single-input input {
+    max-width: 160px;
+    max-height: 72px;
+    padding: 1.5rem;
+    font-size: 30px;
+    font-weight: var(--fw-bold);
+    color: var(--clr-off-black);
+    border: 1px solid var(--clr-light-grey);
+    outline: none;
+    border-radius: 0.5rem;
+}
+
+.single-input input[error] {
+    border: 1px solid var(--clr-light-red);
+}
+
+.single-input input::placeholder {
+    color: var(--clr-smokey-grey);
+}
+
+.single-input input:hover {
+    cursor: pointer;
+}
+
+.single-input input:focus {
+    border: 1px solid var(--clr-purple);
+}
+
+.single-input p {
+    display: none;
+    font-size: 14px;
+    font-weight: var(--fw-regular);
+    font-style: italic;
+    color: var(--clr-light-red);
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 2px;
+    background-color: var(--clr-light-grey);
+    margin-top: -7.5%;
+    padding-right: 6rem;
+}
+
+.calculate-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 100%;
+    background-color: var(--clr-purple);
+    padding: 2.5rem;
+}
+
+.calculate-button:hover {
+    cursor: pointer;
+    background-color: var(--clr-off-black);
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    line-height: 1.1;
+}
+
+.result-row {
+    font-size: 104px;
+    font-weight: var(--fw-extrabold);
+    font-style: italic;
+    color: var(--clr-off-black);
+    letter-spacing: -3px;
+}
+
+.result-row-number {
+    color: var(--clr-purple);
+}
+
+@media only screen and (width <=864px) {
+    main {
+        min-width: 344px;
+        max-width: 344px;
+        max-height: fit-content;
+        padding: 2.5rem 1.5rem 2.5rem 1.5rem;
+        border-radius: 1.5rem 1.5rem 6.5rem 1.5rem;
+        gap: 2.5rem;
+    }
+
+    .inputs {
+        gap: 1rem;
+    }
+
+    .single-input label {
+        font-size: 12px;
+    }
+
+    .single-input input {
+        font-size: 20px;
+        font-weight: var(--fw-extrabold);
+        padding: 0.75rem;
+        max-width: 88px;
+        max-height: 54px;
+    }
+
+    .single-input p {
+        font-size: 12px;
+        text-align: left;
+    }
+
+    .calculate-button {
+        display: block;
+        width: 64px;
+        height: 64px;
+        padding: 1rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(25%, -50%);
+    }
+
+    .calculate-button img {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+    }
+
+    .result {
+        margin-top: 1rem;
+    }
+
+    .result-row {
+        font-size: 56px;
+    }
+}
