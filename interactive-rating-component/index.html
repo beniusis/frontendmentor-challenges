@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Interactive rating component</title>
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="card">
+      <div class="rating-container">
+        <div class="star-icon">
+          <img src="assets/images/icon-star.svg" alt="" />
+        </div>
+        <div class="rating-content">
+          <h2>How did we do?</h2>
+          <p>
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+        </div>
+        <div class="ratings">
+          <button aria-label="1" value="1" onclick="rate(this.value)">1</button>
+          <button aria-label="2" value="2" onclick="rate(this.value)">2</button>
+          <button aria-label="3" value="3" onclick="rate(this.value)">3</button>
+          <button aria-label="4" value="4" onclick="rate(this.value)">4</button>
+          <button aria-label="5" value="5" onclick="rate(this.value)">5</button>
+        </div>
+        <button class="rating-submit" aria-label="Submit" onclick="submit()">
+          Submit
+        </button>
+      </div>
+
+      <div class="thank-you-container">
+        <div class="top">
+          <img src="assets/images/illustration-thank-you.svg" alt="" />
+          <p class="rating-answer">
+            You selected <span class="selected-rating"></span> out of 5
+          </p>
+        </div>
+        <div class="bottom">
+          <h2>Thank you!</h2>
+          <p>
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don’t hesitate to get in touch!
+          </p>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
