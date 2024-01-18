@@ -37,7 +37,7 @@ body {
     max-width: 732px;
     min-width: 328px;
     max-height: 280px;
-    box-shadow: 0 0 10rem 0.025rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 3rem 0.0125rem rgba(0, 0, 0, 0.1);
 }
 
 .sr-only {
