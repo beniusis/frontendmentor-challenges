@@ -13,10 +13,8 @@ async function generateAdvice() {
     adviceId.textContent = advice.slip.id;
     adviceText.textContent = advice.slip.advice;
     generateButton.disabled = true;
-    generateButton.ariaDisabled = true;
     await sleep(2000);
     generateButton.disabled = false;
-    generateButton.ariaDisabled = false;
   } catch (error) {
     adviceId.textContent = "000";
     adviceText.textContent = "Could not retrieve the advice. Try again.";
