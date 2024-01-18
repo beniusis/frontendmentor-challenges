@@ -1,0 +1,122 @@
+:root {
+    --ff-manrope: "Manrope", sans-serif;
+
+    --fs-sm: 0.875rem;
+    --fs-2xl: 1.5rem;
+    --fs-3xl: 1.75rem;
+
+    --fw-extrabold: 800;
+
+    --clr-light-cyan: hsl(193, 38%, 86%);
+    --clr-neon-green: hsl(150, 100%, 66%);
+    --clr-dark-grayish-blue: hsl(217, 19%, 24%);
+    --clr-dark-blue: hsl(218, 23%, 16%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    min-height: 100vh;
+    font-family: var(--ff-family);
+    background-color: var(--clr-dark-blue);
+}
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 2.875rem 2.875rem 4.25rem 2.875rem;
+    max-width: 540px;
+    max-height: fit-content;
+    border-radius: 1rem;
+    font-family: var(--ff-manrope);
+    background-color: var(--clr-dark-grayish-blue);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: rect(0 0 0 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+h2 {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-extrabold);
+    text-transform: uppercase;
+    letter-spacing: .2188rem;
+    color: var(--clr-neon-green);
+}
+
+q {
+    font-size: var(--fs-3xl);
+    font-weight: var(--fw-extrabold);
+    letter-spacing: -0.0156rem;
+    color: var(--clr-light-cyan);
+}
+
+picture img {
+    margin-top: 1rem;
+}
+
+button {
+    position: absolute;
+    bottom: -2rem;
+    display: flex;
+    padding: 1.25rem;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    background-color: var(--clr-neon-green);
+}
+
+button:hover {
+    box-shadow: 0 0 2rem 0.1rem var(--clr-neon-green);
+}
+
+button[disabled]:hover {
+    cursor: default;
+    box-shadow: none;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (width <=480px) {
+    main {
+        max-width: 342px;
+        gap: 1.375rem;
+        padding: 2.375rem 1.5rem 3.6875rem 1.5rem;
+    }
+
+    q {
+        font-size: var(--fs-2xl);
+    }
+
+    picture img {
+        margin-top: .125rem;
+    }
+}
