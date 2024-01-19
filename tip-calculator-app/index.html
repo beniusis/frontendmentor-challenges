@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <h1 class="sr-only">Tip calculator app</h1>
+      <div class="logo" aria-hidden="true">
+        <img src="assets/images/logo.svg" alt />
+      </div>
+      <div class="card">
+        <div class="inputs">
+          <div class="input-container">
+            <div class="label-and-error-container">
+              <label for="bill-total">Bill</label>
+              <span class="error" id="bill-total-error" hidden></span>
+            </div>
+            <div class="input" id="bill-total">
+              <img src="assets/images/icon-dollar.svg" alt />
+              <input
+                class="bill"
+                type="number"
+                placeholder="0"
+                aria-label="total bill in dollars"
+              />
+            </div>
+          </div>
+          <div class="select-tip-container">
+            <label for="tips">Select Tip %</label>
+            <div id="tips">
+              <button class="tip" value="5">5%</button>
+              <button class="tip" value="10">10%</button>
+              <button class="tip" value="15">15%</button>
+              <button class="tip" value="25">25%</button>
+              <button class="tip" value="50">50%</button>
+              <input class="custom-tip" type="number" placeholder="Custom" />
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="label-and-error-container">
+              <label for="number-of-people">Number of People</label>
+              <span class="error" id="number-of-people-error" hidden></span>
+            </div>
+            <div class="input" id="number-of-people">
+              <img src="assets/images/icon-person.svg" alt />
+              <input
+                class="people-count"
+                type="number"
+                placeholder="0"
+                aria-label="number of people splitting the bill"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="result">
+          <div class="result-lines">
+            <div class="result-line-container">
+              <div class="left">
+                <p>Tip Amount</p>
+                <span>/ person</span>
+              </div>
+              <span class="tip-amount-per-person-result result-answer"></span>
+            </div>
+            <div class="result-line-container">
+              <div class="left">
+                <p>Total</p>
+                <span>/ person</span>
+              </div>
+              <span class="total-per-person-result result-answer"></span>
+            </div>
+          </div>
+          <button class="reset-button" disabled>Reset</button>
+        </div>
+      </div>
+    </main>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
