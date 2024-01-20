@@ -44,6 +44,7 @@ main {
     justify-content: center;
     align-items: center;
     gap: 5.5rem;
+    padding: 1rem;
 }
 
 .sr-only {
@@ -68,15 +69,14 @@ main {
 }
 
 .card {
-    display: flex;
-    flex-direction: row;
-    gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 3rem;
     padding: 2rem 2rem 2rem 3rem;
     border-radius: 1.25rem;
     background-color: var(--clr-white);
-    width: 920px;
-    max-height: 482px;
-    height: 100%;
+    max-width: 920px;
 }
 
 .inputs {
@@ -181,6 +181,7 @@ label {
     align-items: center;
     text-align: center;
     max-width: 117px;
+    width: 100%;
     max-height: 48px;
     padding: 1rem 0;
     border: none;
@@ -300,4 +301,69 @@ input[type=number] {
 .reset-button:not([disabled]):hover {
     cursor: pointer;
     background-color: var(--clr-hover);
+}
+
+@media only screen and (width <=768px) {
+    main {
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+
+    .card {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        max-height: fit-content;
+        padding: 2rem;
+        column-gap: 0;
+        row-gap: 2rem;
+    }
+}
+
+@media only screen and (width <=480px) {
+    main {
+        max-width: 100%;
+        width: 100%;
+        padding: 2rem 0 0 0;
+    }
+
+    .card {
+        width: 100%;
+        justify-items: center;
+        padding: 2.375rem 2.125rem 2rem 2rem;
+        max-height: 800px;
+        border-radius: 1.25rem 1.25rem 0 0;
+    }
+
+    .inputs {
+        max-width: 312px;
+    }
+
+    #tips {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .tip,
+    .custom-tip {
+        max-width: 148px;
+        width: 100%;
+    }
+
+    .custom-tip {
+        padding: 0 1rem;
+    }
+
+    .result {
+        max-width: 328px;
+        max-height: 258px;
+        padding: 2rem 1.5rem 1.5rem 1.5rem;
+    }
+
+    .result-lines {
+        gap: 0;
+    }
+
+    .result-answer {
+        font-size: 32px;
+    }
 }
