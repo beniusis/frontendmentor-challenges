@@ -8,7 +8,7 @@ Users should be able to:
 
 - View the optimal layout for the section depending on their device's screen size
 
-### Screenshot
+### Screenshots
 
 ![Finished Desktop View](./assets/images/finished-desktop-view.png)
 
